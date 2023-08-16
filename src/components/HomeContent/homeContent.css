@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Questrial&display=swap');
+
+
+
+.bodyHomeContent{
+    background-color: #c2a8975b;
+}
+
+h2{
+    text-align: center;
+    padding: 60px 0px!important;
+    font-family: 'Questrial', sans-serif;
+    text-shadow: 0 0 3px #422719;
+}
+
+
+.cardHome1, .cardHome2, .cardHome3{
+    text-align: center;
+    width: 80%;
+
+    margin: 0px 7% 60px 7%;
+    display: flex;
+    flex-direction: column;
+}
+.cardHome1 img, .cardHome2 img, .cardHome3 img{
+    width: 100%;
+    height: 300px;
+    border-radius: 120px 120px 0px 0px;
+    border: #C2A897 solid 2px;
+}
+.cardContent h4{
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    margin-top: 8px;
+}
+.cardContent p{
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+}
+.cardContent a{
+    color: #422719;
+    cursor: pointer;
+}
+.cardContent{
+    background-color: #C2A897;
+    width: 100%;
+    height: 220px;
+}
+
+
+
+

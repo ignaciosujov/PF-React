@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Questrial&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.contentHome{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.carouselTitle{
+    margin-bottom: 15%;
+}
+.carouselTitle h3{
+    font-family: 'Questrial', sans-serif;
+    text-shadow: 0 0 5px #000;
+    font-size: 38px;
+}
+.carouselTitle h3 span{
+    font-family: 'Freehand', cursive;
+    text-shadow: 0 0 5px #422719;
+    
+}
+.img1, .img2, .img3{
+    height: calc(90vh - 90px);
+    filter: sepia(0) blur(1px) contrast(0.7);
+    opacity: 1;
+    transition: all 1s;
+}
+.img1:hover, .img2:hover, .img3:hover{
+    scale: 1.1;
+    opacity: 0.92;
+    transition: all 1s;
+} 
+
+.fondoHome{
+    width: 90%;
+    height: auto;
+    margin: 10px;
+}

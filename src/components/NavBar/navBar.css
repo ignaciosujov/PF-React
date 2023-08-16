@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Questrial&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #C2A897;
+}
+.navBar{
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    background-color: #CBA075;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoLamp{
+    width: 36px;
+    height: auto;
+}
+.logo span{
+    margin-left: 10px;
+    font-family: 'Freehand', cursive;
+    font-size: 26px;
+    text-shadow: 0px 4px 5px #633623;
+}
+.navBar ul{
+    display: flex;
+    align-items: center;
+}
+.navBar ul li{
+    margin: 10px 25px;
+    list-style-type: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.navBar ul li:hover{
+    text-shadow: 0 0 3px #422719;
+    transition: all 0.5s;
+}
+#basic-nav-dropdown{
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+#basic-nav-dropdown:hover{
+    text-shadow: 0 0 3px #422719;
+    transition: all 0.5s;
+}
+#basic-nav-dropdown li{
+    margin: 10px 25px;
+    list-style-type: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#basic-nav-dropdown .active{
+    text-shadow: none;
+
+}
+
+
+.active{
+    text-shadow: 0 0 3px #422719;
+}
+.navBar a{
+    text-decoration: none;
+    color: #422719;
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #422719;
+    border-radius: 15px;
+    padding: 5px;
+}
+.cart span{
+    color: #CBA075;
+}
+.cartIcon{
+    color: #C9A974;
+
+    width: 35px;
+    height: 35px;
+    
+    padding: 5px;
+}

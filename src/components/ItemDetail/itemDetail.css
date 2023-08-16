@@ -1,0 +1,39 @@
+
+
+.itemDetail .info, .img{
+    padding: 40px;
+    margin: 30px 40px;
+}
+
+.itemDetail .info{
+    background-color: #C2A897;
+}
+
+.info h3{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.info span{
+    font-size: 24px;
+}
+.info button{
+    background-color: #422719;
+    border: #422719 solid 1px;
+}
+.info button:hover{
+    background-color: #422719af;
+    border: #422719 solid 1px;
+}
+.unidadesToAdd{
+    margin: 25px;
+}
+.divItemCount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.addToCart{
+    text-align: center;
+    margin-bottom: 15px;
+}
