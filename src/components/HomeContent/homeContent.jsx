@@ -2,35 +2,14 @@ import { useEffect, useState } from 'react'
 import './homeContent.css'
 import { Link } from 'react-router-dom'
 import { collection, getFirestore, where, getDocs, query } from 'firebase/firestore'
+import { useGetDocumentById } from '../hooks/useGetDocumentById'
 
 
 
 
 function HomeContent(){
 
-        const [products, setProducts] = useState([])
-
-        useEffect(() => {
-            const db = getFirestore()
-
-            const destacadosCollection = collection(db, "items")
-            const conditionDestacados = where("category", "==", "destacados")
-
-            const q = query(destacadosCollection, conditionDestacados)
-
-            getDocs(q).then((snapshot) => {
-                if(snapshot.size > 0){
-                    const items = snapshot.docs.map((doc) => {
-                        return {
-                            id: doc.id,
-                            ...doc.data()
-                        }
-                    })
-
-                    setProducts(items)
-                }
-            })
-        }, [])
+        const {products} = useGetDocumentById("category", "destacados")
 
         return(
             <div className='bodyHomeContent'>

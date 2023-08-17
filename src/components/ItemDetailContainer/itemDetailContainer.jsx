@@ -3,31 +3,16 @@ import { getItem } from '../../mock/dataProducts'
 import ItemDetail from '../ItemDetail/itemDetail'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc, getFirestore, collection, getDocs } from "firebase/firestore"
+import { useGetOneDocumentById } from '../hooks/useGetDocumentById'
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
     const { id } = useParams()
 
-        useEffect(() => {
-        const db = getFirestore()
-
-        const itemsRef = doc(db, "items", id)
-        getDoc(itemsRef).then((snapshot) => {
-            if (snapshot.exists()){
-                const product = {
-                    id: snapshot.id, ...snapshot.data()
-                }
-
-                setProduct(product)
-            }
-        })
-    }, [])
-
-
-  return (
+    const {product} = useGetOneDocumentById(id)
+    return (
     <div><ItemDetail product={product}></ItemDetail></div>
-  )
+    )
 }
 
 export default ItemDetailContainer;

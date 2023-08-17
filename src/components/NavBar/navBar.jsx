@@ -3,8 +3,9 @@ import NavBarContent from './navBarContent';
 import Logo from '../Logo/logo';
 import { useState } from 'react';
 import '../HomeContent/homeContent'
-import { NavDropdown, NavLink } from 'react-bootstrap';
+import { NavDropdown} from 'react-bootstrap';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -27,7 +28,7 @@ function NavBar() {
             </NavDropdown>
             <NavBarContent titulo='Nosotros' url='/nosotros'></NavBarContent>
             <NavBarContent titulo='Contacto' url='/contacto' />
-            <CartWidget contador={contadorCarrito}></CartWidget>
+            <NavLink to="/cart"><CartWidget></CartWidget></NavLink>
         </ul>
     </nav>
     )

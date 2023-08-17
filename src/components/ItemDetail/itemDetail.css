@@ -21,6 +21,15 @@
     background-color: #422719;
     border: #422719 solid 1px;
 }
+.info button:disabled{
+    background-color: #422719af;
+    border: #422719 solid 1px;
+
+}
+.info button:active{
+    background-color: #ffffff00!important;
+    border: #fff solid 1px!important;
+}
 .info button:hover{
     background-color: #422719af;
     border: #422719 solid 1px;

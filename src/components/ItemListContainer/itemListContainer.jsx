@@ -4,51 +4,13 @@ import ItemDetailContainer from "../ItemDetailContainer/itemDetailContainer";
 import { getProducts } from "../../mock/dataProducts";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore, collection, getDocs, where, query } from "firebase/firestore"
+import { useGetDocumentById } from "../hooks/useGetDocumentById";
 
 
 function ItemListContainer(){
-    const [products, setProducts] = useState([])
     const { categoryId } = useParams()
     
-    
-
-
-    useEffect(() => {
-        const db = getFirestore()
-        if (categoryId){
-            const destacadosCollection = collection(db, "items")
-            const conditionDestacados = where("category", "==", categoryId)
-    
-            const q = query(destacadosCollection, conditionDestacados)
-    
-            getDocs(q).then((snapshot) => {
-                if(snapshot.size > 0){
-                    const items = snapshot.docs.map((doc) => {
-                        return {
-                            id: doc.id,
-                            ...doc.data()
-                        }
-                    })
-    
-                    setProducts(items)
-                }
-            })
-        }else{
-            const itemCollection = collection(db, "items")
-        getDocs(itemCollection).then((snapshot) => {
-            if(snapshot.size > 0){
-                const items = snapshot.docs.map((doc) => {
-                    return {
-                        id: doc.id,
-                        ...doc.data()
-                    }
-                })
-                setProducts(items)
-            }
-        })
-        }
-
-    }, [categoryId])
+    const {products} = useGetDocumentById("category", categoryId)
 
     let categoryName = ""
 
