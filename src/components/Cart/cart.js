@@ -5,14 +5,15 @@ import { serverTimestamp } from "firebase/firestore";
 import saveOrder from "../NewOrder/newOrder";
 import { useState } from "react";
 import CheckOut from "../CheckOut/chekcOut";
+import './cart.css'
 
 const Cart = () => {
     const { removeItem, cartList, prodTotalPrice, cartTotalPrice, removeList} = useCartContext();
     const [purchaseCompleted, setPurchaseCompleted] = useState(false);
     const displayItems = cartList.map((prod) => (
-        <div key={prod.id}>
+        <div key={prod.id} className="cartItem">
             <span>{prod.name} - ${prodTotalPrice(prod, prod.quantity)} x {prod.quantity}</span>
-            <Button onClick={() => removeItem(prod.id)}>Eliminar del carrito</Button>
+            <span className="deletePurchase" onClick={() => removeItem(prod.id)}>Eliminar del carrito</span>
         </div>
     ));
     const order = {
@@ -40,17 +41,22 @@ const Cart = () => {
 
 
     return (
-        <div>
+        <div className="d-flex justify-content-center align-items-center cartContainer">
             { cartList.length > 0 ? 
-                <div>
-                    {displayItems}
-                    <h2>Monto total: ${cartTotalPrice()}</h2>
-                    <Button  onClick={handlePurchase}>Terminar compra</Button>
+                <div className="cartPurchase">
+                    <div>
+                        <h2 className="cartTitle">Carrito de compras</h2>
+                    </div>
+                    <div>
+                        {displayItems}
+                        <h3 className="montoTotalPurchase">Monto total: ${cartTotalPrice()}</h3>
+                        <Button className="endPurchase" onClick={handlePurchase}>Terminar compra</Button>
+                    </div>
                 </div>
                 :
                 <div>
                     <h2>No hay items en el carrito</h2>
-                    <Button as={Link} to="/productos">Buscar productos</Button>
+                    <Button className="endPurchase" as={Link} to="/productos">Buscar productos</Button>
                 </div>
             }
         </div>

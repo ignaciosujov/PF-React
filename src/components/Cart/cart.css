@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #c2a8975b;
+}
+#root{
+    background-color: #c2a8975b;
+}
+
+.cartContainer{
+    margin-top: 100px;
+    background-color: #c2a8975b;
+    padding: 55px;
+}
+.cartPurchase{
+    padding: 80px;  
+}
+.montoTotalPurchase{
+    font-size: 28px;
+}
+.cartTitle{
+    padding: 10px!important;
+    margin-bottom: 55px;
+}
+.cartItem{
+    margin-bottom: 25px;
+    background-color: #cba075a4;
+    padding: 15px;
+    font-size: 20px;
+    -webkit-box-shadow: 7px 7px 37px -10px rgba(203,160,117,0.95);
+-moz-box-shadow: 7px 7px 37px -10px rgba(203,160,117,0.95);
+box-shadow: 7px 7px 37px -10px rgba(203,160,117,0.95);
+}
+.deletePurchase{
+    margin-left: 25px;
+    font-size: 16px;
+    color: 422719;
+    cursor: pointer;
+}
+.deletePurchase:hover{
+    text-decoration: underline;
+}
+.endPurchase{
+    background-color: #422719!important;
+    border: #422719 solid 1px!important;
+    margin-top: 25px;
+}
+.endPurchase:hover{
+    background-color: #422719af!important;
+    border: #422719 solid 1px!important;
+}

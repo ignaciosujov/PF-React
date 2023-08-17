@@ -24,13 +24,13 @@ const ItemDetail = ({product}) => {
         </div>
         <div className='info'>
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
+            <p>{product.descriptionDetail}</p>
             <span>${product.price}</span>
             <p>Unidades disponibles: {product.stock}</p>
             { isAdded ? 
-                        <div>
-                            <Button as={Link} to="/cart">Terminar mi compra</Button>
-                            <Button as={Link} to="/">Seguir comprando</Button>
+                        <div className='d-flex flex-column'>
+                            <Button className='buttonAfterAdd' as={Link} to="/cart">Ir al carrito</Button>
+                            <Button className='buttonAfterAdd' as={Link} to="/productos">Seguir comprando</Button>
                         </div>
                         :
             <ItemCount stock={product.stock} onAdd={onAdd}></ItemCount>
