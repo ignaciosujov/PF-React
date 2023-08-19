@@ -21,10 +21,10 @@ function NavBar() {
         <ul>
             <NavBarContent />
             <NavDropdown title="Productos" id='basic-nav-dropdown'>
-                <DropdownItem as={NavBarContent} titulo='Todos los productos' url='/productos'> </DropdownItem>
-                <DropdownItem as={NavBarContent} titulo='Destacados' url='/productos/category/destacados' ></DropdownItem>
-                <DropdownItem as={NavBarContent} titulo='Nuevos' url='/productos/category/nuevos' ></DropdownItem>
-                <DropdownItem as={NavBarContent} titulo='Mas vendidos' url='/productos/category/vendidos' ></DropdownItem>
+                <DropdownItem className='dropDownItem' as={NavBarContent} titulo='Todos los productos' url='/productos'> </DropdownItem>
+                <DropdownItem className='dropDownItem' as={NavBarContent} titulo='Destacados' url='/productos/category/destacados' ></DropdownItem>
+                <DropdownItem className='dropDownItem' as={NavBarContent} titulo='Nuevos' url='/productos/category/nuevos' ></DropdownItem>
+                <DropdownItem className='dropDownItem' as={NavBarContent} titulo='Mas vendidos' url='/productos/category/vendidos' ></DropdownItem>
             </NavDropdown>
             <NavBarContent titulo='Nosotros' url='/nosotros'></NavBarContent>
             <NavBarContent titulo='Contacto' url='/contacto' />

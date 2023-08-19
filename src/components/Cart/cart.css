@@ -11,13 +11,19 @@ html{
     background-color: #c2a8975b;
 }
 
+.fondoCart{
+    background-image: url(../assets/img/fondoCart.svg);
+    background-size: cover;
+    height: calc(100vh - 90px);
+}
+
 .cartContainer{
-    margin-top: 100px;
-    background-color: #c2a8975b;
+    background-color: #c2a897;
     padding: 55px;
+    border: #cfbfb4 solid 2px;
 }
 .cartPurchase{
-    padding: 80px;  
+    padding: 0 80px;
 }
 .montoTotalPurchase{
     font-size: 28px;
@@ -52,4 +58,22 @@ box-shadow: 7px 7px 37px -10px rgba(203,160,117,0.95);
 .endPurchase:hover{
     background-color: #422719af!important;
     border: #422719 solid 1px!important;
+}
+.divCartPurchase h3{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.formPurchase input{
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: #422719af;
+    color: white;
+    border: #422719 solid 2px;
+}
+.formPurchase ::placeholder{
+    color: white;
+}
+.buttonForm{
+    background-color: #422719!important;
+    border: #422719 solid 2px!important;
 }

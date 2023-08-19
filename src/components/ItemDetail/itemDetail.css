@@ -3,6 +3,10 @@
 .itemDetail{
     background-color: #422719;
     height: 600px;
+    background-image: url(../assets/img/fondoItemDetail.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 90px);
 }
 
 .itemDetail .info, .img{
@@ -12,6 +16,8 @@
 
 .itemDetail .info{
     background-color: #C2A897;
+    border-radius: 15px;
+    border: #cfbfb4 solid 2px;
 }
 .itemDetail .img{
     padding: 0;
@@ -24,14 +30,15 @@
     margin: 0;
     width: 100%;
     border-radius: 4px;
-    -webkit-box-shadow: 0px 7px 39px -7px rgba(203,160,117,0.16);
--moz-box-shadow: 0px 7px 39px -7px rgba(203,160,117,0.16);
-box-shadow: 0px 7px 39px -7px rgba(203,160,117,0.16);
-
+    -webkit-box-shadow: 0px 0px 26px -2px rgba(66,39,25,1);
+    -moz-box-shadow: 0px 0px 26px -2px rgba(66,39,25,1);
+    box-shadow: 0px 0px 26px -2px rgba(66,39,25,1);
 }
 .info h3{
     margin-bottom: 25px;
     text-align: center;
+    font-weight: bold;
+    font-size: 28px;
 }
 .info{
     width: 600px;
@@ -79,3 +86,11 @@ box-shadow: 0px 7px 39px -7px rgba(203,160,117,0.16);
     border: #422719 solid 1px!important;
 
 }
+
+.productsTitle{
+    background-color: #cfbfb4;
+    background-image: linear-gradient(0deg, #cfbfb4 0%, #c2a897 99%);
+    
+    -webkit-box-shadow: 0px 7px 18px 4px rgba(207,191,180,1);
+    -moz-box-shadow: 0px 7px 18px 4px rgba(207,191,180,1);
+    box-shadow: 0px 7px 18px 4px rgba(207,191,180,1);}

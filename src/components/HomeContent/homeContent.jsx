@@ -20,7 +20,9 @@ function HomeContent(){
                     {products.map(product => (
                         <div className="col cardHome1">
                             <div>
-                                <img src={product.img} />
+                                <Link key={product.id} to={`/productos/item/${product.id}`}>
+                                    <img src={product.img} />
+                                </Link>
                             </div>
                             <div className='cardContent'>
                                 <h4>{product.name}</h4>

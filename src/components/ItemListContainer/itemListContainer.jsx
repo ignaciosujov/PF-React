@@ -23,7 +23,7 @@ function ItemListContainer(){
 
     return(
         <div className="bodyHomeContent">
-            <h2>Lista de Productos <span>{categoryName}</span>:</h2>
+            <h2 className="productsTitle">Lista de Productos <span>{categoryName}</span>:</h2>
             <ItemList products={products}></ItemList>
         </div>
     )
