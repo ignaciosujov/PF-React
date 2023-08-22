@@ -64,6 +64,21 @@
     background-color: #422719af;
     border: #422719 solid 1px;
 }
+.seeMoreProducts{
+    background-color: #422719!important;
+    border: #422719 solid 1px!important;
+    margin-top: 10px;
+}
+.seeMoreProducts:hover{
+    background-color: #422719af!important;
+    border: #422719 solid 1px!important;
+
+}
+.seeMoreProducts:active{
+    background-color: #ffffff00!important;
+    border: #fff solid 1px!important;
+
+}
 .unidadesToAdd{
     margin: 25px;
 }

@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Questrial&display=swap');
 
+.divCheckOut{
+    font-family: 'Questrial', sans-serif;
 
-.divCheck{
-    background-color: #c2a897;
+}
+.divCheckOut h2{
+    padding: 10px !important;
+}
+.divCheckOut h3{
+    font-family: 'Freehand', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 25px 0px;
+}
+.dataBuyer{
+    width: 100%;
+    font-size: 18px;
+    background-color: #4227191a;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.dataPurchase{
+    width: 100%;
+    font-size: 18px;
+    background-color: #4227191a;
+    border-radius: 10px;
+    padding: 15px;
+
 }

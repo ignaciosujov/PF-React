@@ -3,15 +3,14 @@ import { useCartContext } from "../CartContext/cartContext";
 import { Link } from "react-router-dom";
 import { serverTimestamp } from "firebase/firestore";
 import saveOrder from "../NewOrder/newOrder";
+import { updateOrder } from "../NewOrder/newOrder";
 import { useState } from "react";
-import CheckOut from "../CheckOut/chekcOut";
+import CheckOut from "../CheckOut/checkOut";
 import './cart.css'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { FormToOrder } from '../NewOrder/formToOrder'
 
 const Cart = () => {
-    const { removeItem, cartList, prodTotalPrice, cartTotalPrice, removeList} = useCartContext();
+    const { removeItem, cartList, prodTotalPrice, cartTotalPrice} = useCartContext();
     const [purchaseCompleted, setPurchaseCompleted] = useState(false);
     const [formData, setFormData] = useState(null);
     const displayItems = cartList.map((prod) => (
@@ -43,13 +42,14 @@ const Cart = () => {
         if (orderId) {
             console.log("Order saved with ID:", orderId);
             setPurchaseCompleted(true);
-
         } else {
             console.log("Error saving order");
         }
         setFormData(orderData)
     };
     if (purchaseCompleted) {
+        updateOrder(cartList[0].id, cartList[0].stock, cartList[0].quantity)
+        console.log(cartList[0].quantity)
         return (<CheckOut order={cartList} formData={formData} />);
     } 
 
@@ -57,7 +57,6 @@ const Cart = () => {
     return (
         <div className="fondoCart d-flex justify-content-center">
         <div className="d-flex justify-content-center align-items-center cartContainer">
-            {/* <ToastContainer /> */}
             { cartList.length > 0 ? 
         
                 <div className="cartPurchase">
@@ -68,7 +67,6 @@ const Cart = () => {
                         {displayItems}
                         <h3 className="montoTotalPurchase">Monto total: ${cartTotalPrice()}</h3>
                         <FormToOrder handlePurchase={handlePurchase}></FormToOrder>
-                        {/* <Button className="endPurchase" onClick={handlePurchase}>Terminar compra</Button> */}
                     </div>
                 </div>
 

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 
 function ItemCount({stock, onAdd}) {
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
 
     const sumar = () => {
         if (count < stock){
@@ -26,6 +27,7 @@ function ItemCount({stock, onAdd}) {
                 <Button onClick={sumar}>+</Button>
             </div>
             <Button disabled={count === 0} onClick={()=>{onAdd(count)}}>Agregar</Button>
+            <Button className="seeMoreProducts" as={Link} to={'/productos'}>Ver mas productos</Button>
         </div>
     )
 }

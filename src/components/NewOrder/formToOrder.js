@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 
 
 
-export const FormToOrder = ({ handlePurchase }) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState(null);
-  
-
+export const FormToOrder = ({ handlePurchase}) => {
+    const [name, setName] = useState("a website buyer");
+    const [email, setEmail] = useState("buyer's email");
+    const [phone, setPhone] = useState(123456789);  
   
     const handleClick = () => {
       const orderData = {
@@ -29,7 +27,6 @@ export const FormToOrder = ({ handlePurchase }) => {
         <div>
           <input
             type="text"
-            value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Nombre"
           />
@@ -37,7 +34,6 @@ export const FormToOrder = ({ handlePurchase }) => {
         <div>
           <input
             type="email"
-            value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
@@ -45,7 +41,6 @@ export const FormToOrder = ({ handlePurchase }) => {
         <div>
           <input
             type="tel"
-            value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="Telefono"
           />

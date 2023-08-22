@@ -6,7 +6,7 @@ function NavBarContent({ titulo = "Home", url = "/"}){
 
     return (
         <li>
-            <NavLink activeClassName="active" to={url}>{titulo}</NavLink>
+            <NavLink activeclassname="active" to={url}>{titulo}</NavLink>
         </li>
     )
 }

@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 
 const ItemDetail = ({product}) => {
     
-    const { addItem } = useCartContext();
+    const { addItem, cartList } = useCartContext();
     const [isAdded, setIsAdded] = useState(false);
 
     const onAdd = (cantidad) => {
@@ -26,14 +26,17 @@ const ItemDetail = ({product}) => {
             <h3>{product.name}</h3>
             <p>{product.descriptionDetail}</p>
             <span>${product.price}</span>
-            <p>Unidades disponibles: {product.stock}</p>
+            {product.stock === 0 ? 
+                <p>No disponible</p> 
+            : 
+                <p>Unidades disponibles: {product.stock}</p>}
             { isAdded ? 
-                        <div className='d-flex flex-column'>
-                            <Button className='buttonAfterAdd' as={Link} to="/cart">Ir al carrito</Button>
-                            <Button className='buttonAfterAdd' as={Link} to="/productos">Seguir comprando</Button>
-                        </div>
-                        :
-            <ItemCount stock={product.stock} onAdd={onAdd}></ItemCount>
+                <div className='d-flex flex-column'>
+                    <Button className='buttonAfterAdd' as={Link} to="/cart">Ir al carrito</Button>
+                    <Button className='buttonAfterAdd' as={Link} to="/productos">Seguir comprando</Button>
+                </div>
+            :
+                <ItemCount stock={product.stock} onAdd={onAdd}></ItemCount>
             }
         </div>
     </div>
